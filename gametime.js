@@ -70,11 +70,11 @@ window.addEventListener("beforeunload", (() => {
               gametime.connected = !1;
               throw new Error("An error occurred while trying to establish a connection with Gametime.js.\nMake sure the Publish/Subscribe keys are correct and that you are on the right channel.")
             } else {
-            gametime.didConnect();
             gametime.connected = !0;
             if (typeof gametime.onconnect == "function") {
               gametime.onconnect();
             }
+            gametime.didConnect();
             }
             }))
           }), 3e3)

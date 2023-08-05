@@ -74,7 +74,9 @@ window.addEventListener("beforeunload", (() => {
             if (typeof gametime.onconnect == "function") {
               gametime.onconnect();
             }
-            gametime.didConnect();
+            let fix = setInterval(() => {
+              if (typeof gametime.didConnect == "function") gametime.didConnect(), clearInterval(fix);
+            }, 100);
             }
             }))
           }), 3e3)

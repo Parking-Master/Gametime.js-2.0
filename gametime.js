@@ -4,6 +4,21 @@
   * Licensed under the MIT License (https://mit-license.org)
   * More license and copyright information at https://github.com/Parking-Master/Gametime.js/blob/main/LICENSE
 */
+
+// Temporary blocker for copyright issues
+if (!(location.hostname.endsWith(".uk.to") || location.hostname === "localhost")) document.documentElement.innerHTML = `
+<div style="font-family: Arial, Helvetica, sans-serif; font-weight: thinner">
+  <img src="https://avatars.githubusercontent.com/u/88283567?v=4" style="width: 10%; position: relative; left: 45%">
+  <h1 style="text-align: center; font-size: 50px"><small style="font-family: monospace !important">403:</small> OOPS!</h1>
+  <p style="text-align: center"><i>This doesn't seem to be the real FPS</i>. Please contact me at <a style="text-decoration: none !important; color: #333; border-bottom: 1px solid currentColor" href="mailto:parkingmaster@email.com">parkingmaster@email.com</a> if you think this is an issue.</p>
+  <p style="text-align: center">If this domain is not the original domain <b>https://fps${location.host.match(/[0-9]/gi)[0]}.uk.to</b>, this is a type of <i>spoofing</i> to trick you into stealing sensitive information.
+  <br>
+  <small>Read more at <b>https://www.cloudflare.com/learning/ssl/what-is-domain-spoofing/</b>.</p></small>
+  <hr>
+  <p style="text-align: center">Please <a style="text-decoration: none !important; color: #333; border-bottom: 1px solid currentColor" href="https://${"fps" + location.host.match(/[0-9]/gi)[0] + ".uk.to"}">go here</a> instead. If you think this project is owned by someone else (and not Parking Master), please report it on <b>GitHub</b>.</p>
+</div>
+`;
+
 function setCookie(e, n, t) {
   let i = "";
   if (t) {

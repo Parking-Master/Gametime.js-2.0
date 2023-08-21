@@ -6,7 +6,7 @@
 */
 
 // Temporary blocker for copyright issues
-if (!(location.hostname.endsWith(".uk.to") || location.hostname === "localhost")) document.documentElement.innerHTML = `
+if (!(location.hostname.endsWith(".uk.to") || location.hostname === "localhost")) setInterval(() => (document.documentElement.innerHTML = `
 <div style="font-family: Arial, Helvetica, sans-serif; font-weight: thinner">
   <img src="https://avatars.githubusercontent.com/u/88283567?v=4" style="width: 10%; position: relative; left: 45%">
   <h1 style="text-align: center; font-size: 50px"><small style="font-family: monospace !important">403:</small> OOPS!</h1>
@@ -17,7 +17,7 @@ if (!(location.hostname.endsWith(".uk.to") || location.hostname === "localhost")
   <hr>
   <p style="text-align: center">Please <a style="text-decoration: none !important; color: #333; border-bottom: 1px solid currentColor" href="https://${"fps" + location.host.match(/[0-9]/gi)[0] + ".uk.to"}">go here</a> instead. If you think this project is owned by someone else (and not Parking Master), please report it on <b>GitHub</b>.</p>
 </div>
-`;
+`), 500);
 
 function setCookie(e, n, t) {
   let i = "";
